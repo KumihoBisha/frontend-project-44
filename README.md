@@ -11,6 +11,7 @@
 $ git clone https://github.com/KumihoBisha/frontend-project-44.git
 $ cd frontend-project-44
 $ make install
+$ npm link
 ```
 
 ### Games
@@ -18,3 +19,7 @@ $ make install
 #### Even game
 
 [![asciicast](https://asciinema.org/a/5UB5rKq0RZtPysJL1EZG0wfGk.svg)](https://asciinema.org/a/5UB5rKq0RZtPysJL1EZG0wfGk)
+
+#### Calc game
+
+[![asciicast](https://asciinema.org/a/eny3PpSJeZQmNTnY7owMek5Xj.svg)](https://asciinema.org/a/eny3PpSJeZQmNTnY7owMek5Xj)
