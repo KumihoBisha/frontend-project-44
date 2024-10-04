@@ -10,12 +10,11 @@ const brainGameStructure = (rules, getGameData) => {
   for (let score = 0; score < roundsCount; score += 1) {
     const [challenge, correctAnswer] = getGameData();
     const userAnswer = readlineSync.question(`Question: ${challenge}\nYour answer: `);
-    if (correctAnswer === userAnswer) {
-      console.log('Correct!');
-    } else {
+    if (String(correctAnswer) !== userAnswer) {
       console.log(`"${userAnswer}" is wrong answer ;(. Correct answer was "${correctAnswer}".\nLet's try again, ${userName}!`);
       return;
     }
+    console.log('Correct!');
   }
   console.log(`Congratulations, ${userName}!`);
 };
