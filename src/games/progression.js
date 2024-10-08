@@ -20,7 +20,7 @@ const playBrainProgressionGame = () => {
     const progressionWithHiddenElement = progression.slice();
     progressionWithHiddenElement[hiddenElementIndex] = '..';
     return [progressionWithHiddenElement, hiddenElement];
-  }
+  };
 
   const brainProgressionGameRound = () => {
     const [progression, hiddenElement] = hideElement(makeProgression());
