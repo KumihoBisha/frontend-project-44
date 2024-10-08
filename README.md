@@ -23,3 +23,7 @@ $ npm link
 #### Calc game
 
 [![asciicast](https://asciinema.org/a/eny3PpSJeZQmNTnY7owMek5Xj.svg)](https://asciinema.org/a/eny3PpSJeZQmNTnY7owMek5Xj)
+
+#### Gcd game
+
+[![asciicast](https://asciinema.org/a/IkS544r26v4OV8gD4BKhAo7Q6.svg)](https://asciinema.org/a/IkS544r26v4OV8gD4BKhAo7Q6)
