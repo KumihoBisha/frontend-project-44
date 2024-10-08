@@ -14,6 +14,7 @@ const playBrainCalcGame = () => {
         throw new Error(`Wrong operator ${operator}`);
     }
   };
+
   const brainCalcGameRound = () => {
     const operators = ['+', '-', '*'];
     const index = getRandomInt(0, operators.length - 1);
