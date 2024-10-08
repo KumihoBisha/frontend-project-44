@@ -31,3 +31,7 @@ npm link
 #### Progression game
 
 [![asciicast](https://asciinema.org/a/8xoEF0o2Iz3JGXVXRi0MGFOWZ.svg)](https://asciinema.org/a/8xoEF0o2Iz3JGXVXRi0MGFOWZ)
+
+#### Prime game
+
+[![asciicast](https://asciinema.org/a/a1VjzqB6ayN5jwK03HeRHcii3.svg)](https://asciinema.org/a/a1VjzqB6ayN5jwK03HeRHcii3)
