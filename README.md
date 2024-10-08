@@ -8,10 +8,10 @@
 ### Installing
 
 ```
-$ git clone https://github.com/KumihoBisha/frontend-project-44.git
-$ cd frontend-project-44
-$ make install
-$ npm link
+git clone https://github.com/KumihoBisha/frontend-project-44.git
+cd frontend-project-44
+make install
+npm link
 ```
 
 ### Games
@@ -27,3 +27,7 @@ $ npm link
 #### Gcd game
 
 [![asciicast](https://asciinema.org/a/IkS544r26v4OV8gD4BKhAo7Q6.svg)](https://asciinema.org/a/IkS544r26v4OV8gD4BKhAo7Q6)
+
+#### Progression game
+
+[![asciicast](https://asciinema.org/a/8xoEF0o2Iz3JGXVXRi0MGFOWZ.svg)](https://asciinema.org/a/8xoEF0o2Iz3JGXVXRi0MGFOWZ)
