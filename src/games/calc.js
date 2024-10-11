@@ -1,34 +1,23 @@
-import getRandomInt from '../randomint.js';
-import brainGameStructure from '../index.js';
+import getRandomNumber from '../getRandomNumber.js';
+import getValueOfExpression from '../getValueOfExpression.js';
+import runBrainGameStructure from '../index.js';
 
 const playBrainCalcGame = () => {
-  const getCorrectAnswer = (operator, firstNum, secondNum) => {
-    switch (operator) {
-      case '+':
-        return firstNum + secondNum;
-      case '-':
-        return firstNum - secondNum;
-      case '*':
-        return firstNum * secondNum;
-      default:
-        throw new Error(`Wrong operator ${operator}`);
-    }
-  };
-
-  const brainCalcGameRound = () => {
+  const runBrainCalcGameRound = () => {
     const operators = ['+', '-', '*'];
-    const index = getRandomInt(0, operators.length - 1);
+    const operatorIndex = getRandomNumber(0, operators.length - 1);
+    const operator = operators[operatorIndex];
 
-    const num1 = getRandomInt();
-    const num2 = getRandomInt();
+    const number1 = getRandomNumber(1, 99);
+    const number2 = getRandomNumber(1, 99);
 
-    const question = `${num1} ${operators[index]} ${num2}`;
-    const correctAnswer = getCorrectAnswer(operators[index], num1, num2);
-    return [question, correctAnswer];
+    const question = `${number1} ${operator} ${number2}`;
+    const answer = String(getValueOfExpression(operator, number1, number2));
+    return [question, answer];
   };
 
   const rules = 'What is the result of the expression?';
-  brainGameStructure(rules, brainCalcGameRound);
+  runBrainGameStructure(rules, runBrainCalcGameRound);
 };
 
 export default playBrainCalcGame;
