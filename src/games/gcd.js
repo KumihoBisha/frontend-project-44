@@ -1,26 +1,19 @@
-import getRandomInt from '../randomint.js';
-import brainGameStructure from '../index.js';
+import getRandomNumber from '../getRandomNumber.js';
+import getGreatestCommonDivisor from '../getGreatestCommonDivisor.js';
+import runBrainGameStructure from '../index.js';
 
 const playBrainGcdGame = () => {
-  const getGreatestCommonDivisor = (firstNum, secondNum) => {
-    if (secondNum !== 0) {
-      const remainder = firstNum % secondNum;
-      return getGreatestCommonDivisor(secondNum, remainder);
-    }
-    return firstNum;
-  };
+  const runBrainGcdGameRound = () => {
+    const number1 = getRandomNumber(1, 99);
+    const number2 = getRandomNumber(1, 99);
 
-  const brainGcdGameRound = () => {
-    const num1 = getRandomInt();
-    const num2 = getRandomInt();
-
-    const question = `${num1} ${num2}`;
-    const correctAnswer = getGreatestCommonDivisor(num1, num2);
-    return [question, correctAnswer];
+    const question = `${number1} ${number2}`;
+    const answer = String(getGreatestCommonDivisor(number1, number2));
+    return [question, answer];
   };
 
   const rules = 'Find the greatest common divisor of given numbers.';
-  brainGameStructure(rules, brainGcdGameRound);
+  runBrainGameStructure(rules, runBrainGcdGameRound);
 };
 
 export default playBrainGcdGame;
