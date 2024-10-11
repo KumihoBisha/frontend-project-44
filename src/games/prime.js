@@ -9,7 +9,7 @@ const playBrainPrimeGame = () => {
     return [randomNumber, answer];
   };
 
-  const rules = 'Answer "yes" if the number is prime, otherwise answer "no".';
+  const rules = 'Answer "yes" if given number is prime. Otherwise answer "no".';
   runBrainGameStructure(rules, runBrainPrimeGameRound);
 };
 
