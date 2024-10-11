@@ -1,17 +1,16 @@
-import getRandomInt from '../randomint.js';
-import brainGameStructure from '../index.js';
+import getRandomNumber from '../getRandomNumber.js';
+import isEven from '../isEven.js';
+import runBrainGameStructure from '../index.js';
 
 const playBrainEvenGame = () => {
-  const isEven = (num) => num % 2 === 0;
-
-  const brainEvenGameRound = () => {
-    const randomInt = getRandomInt(1, 100);
-    const correctAnswer = isEven(randomInt) ? 'yes' : 'no';
-    return [randomInt, correctAnswer];
+  const runBrainEvenGameRound = () => {
+    const randomNumber = getRandomNumber(1, 100);
+    const answer = isEven(randomNumber) ? 'yes' : 'no';
+    return [randomNumber, answer];
   };
 
   const rules = 'Answer "yes" if the number is even, otherwise answer "no".';
-  brainGameStructure(rules, brainEvenGameRound);
+  runBrainGameStructure(rules, runBrainEvenGameRound);
 };
 
 export default playBrainEvenGame;
