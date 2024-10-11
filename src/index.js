@@ -1,16 +1,17 @@
 import readlineSync from 'readline-sync';
-import showGreetingUser from './cli.js';
 
 const roundsCount = 3;
 
-const brainGameStructure = (rules, getGameData) => {
-  const userName = showGreetingUser();
+const runBrainGameStructure = (rules, getGameData) => {
+  const userName = readlineSync.question('Welcome to the Brain Games!\nMay I have your name? ');
+  const greeting = `Hello, ${userName}!`;
+  console.log(greeting);
   console.log(rules);
 
-  for (let score = 0; score < roundsCount; score += 1) {
-    const [challenge, correctAnswer] = getGameData();
-    const userAnswer = readlineSync.question(`Question: ${challenge}\nYour answer: `);
-    if (String(correctAnswer) !== userAnswer) {
+  for (let round = 0; round < roundsCount; round += 1) {
+    const [description, correctAnswer] = getGameData();
+    const userAnswer = readlineSync.question(`Question: ${description}\nYour answer: `);
+    if ((correctAnswer) !== userAnswer) {
       console.log(`"${userAnswer}" is wrong answer ;(. Correct answer was "${correctAnswer}".\nLet's try again, ${userName}!`);
       return;
     }
@@ -19,4 +20,4 @@ const brainGameStructure = (rules, getGameData) => {
   console.log(`Congratulations, ${userName}!`);
 };
 
-export default brainGameStructure;
+export default runBrainGameStructure;
