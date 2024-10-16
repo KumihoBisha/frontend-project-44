@@ -10,8 +10,8 @@ const runBrainGameStructure = (description, generateRound) => {
   console.log(description);
 
   for (let round = 0; round < roundsCount; round += 1) {
-    const [description, correctAnswer] = generateRound();
-    console.log(`Question: ${description}`);
+    const [question, correctAnswer] = generateRound();
+    console.log(`Question: ${question}`);
     const userAnswer = readlineSync.question('Your answer: ');
     if (correctAnswer !== userAnswer) {
       console.log(`"${userAnswer}" is wrong answer ;(. Correct answer was "${correctAnswer}".`);
